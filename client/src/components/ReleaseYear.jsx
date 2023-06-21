@@ -5,6 +5,7 @@ export const ReleaseYear = () => {
 
     const [peli, setPeli] = useState("");
     const [mostrarInfo, setMostrarInfo] = useState(false);
+    const [mostrarCada, setMostrarCada] = useState(false);
 
 
     const year = () => {
@@ -22,10 +23,16 @@ export const ReleaseYear = () => {
         setMostrarInfo(!mostrarInfo);
     }
 
+    const infoDeCada = () => {
+        setMostrarCada(!mostrarCada)
+
+    }
+
+
     return (
         <div>
             <div>
-                <button onClick={() => { year(); monstrarTodaLaInfo(); }}>2010...</button>
+                <button onClick={() => { year(); monstrarTodaLaInfo(); }}>A partir de 2010...</button>
             </div>
 
             {mostrarInfo &&
@@ -37,8 +44,11 @@ export const ReleaseYear = () => {
 
                         <div key={peli.title} className='div20'>
 
-                            {<button onClick={year} value={peli.title}>{peli.title}</button>}
+                            <button onClick={() => { year(); infoDeCada() }} value={peli.title}>{peli.title}</button>
+
                             <img src={peli.images["Poster Art"].url} alt="" />
+
+                            {mostrarCada ? <div className='divInfoPorPeli'><p className='pInfo'>{peli.title}</p><p className='pInfo'>{peli.releaseYear}</p></div> : ""}
 
                         </div>
 

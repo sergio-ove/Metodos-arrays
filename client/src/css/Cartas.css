@@ -7,24 +7,37 @@
     margin-top: 50px;
     height: 200px;
     margin-right: 20px;
-    background-color: #d4161d;
-    border: solid 2px #c9cccf;
-    color: #c9cccf;
+    background-color: #bbb85d;
+    border: solid 2px #ed3d3e ;
+    color: #ed3d3e;
     border-radius: 5px;
-    margin-left: 30px;
+    margin-left: 80px;
+    font-size: 20px;
+    font-size: 30px;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .div20 {
+    display: flex;
+    flex-direction: column;
     background-color: #f73e3f;
     margin-right: 15px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 15px;
     color: #1e1e21;
+    height: 520px;
+    width: 270px;
+    margin-bottom: 5px;
 }
 
 .div20 img {
     margin: 0 auto;
     border-radius: 5px;
+    width: 98%;
+    height: 80%;
+    padding-top: 1px;
+   
 }
 
 .divOrdenado {
@@ -51,5 +64,15 @@
     padding: 10px;
     width: 100%;
     height: 20%;
-  
+    background-color: black;
+    font-size: 20px;
+}
+
+.divInfoPorPeli{
+    height: 30%;
+}
+
+.pInfo{
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

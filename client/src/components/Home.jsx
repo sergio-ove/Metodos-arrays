@@ -1,31 +1,36 @@
 import React from 'react'
-import { NavLink, Router } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import claqueta from '../img/claqueta.png'
 
 export const Home = () => {
 
 
 
   return (
-    <div className='divDosCajas'>
-      <div>
+    <div>
+      <h2>Métodos de arrays</h2>
+      <div className='divDosCajas'>
+        <div>
 
-      <NavLink to="/funcionesSeries" >
+          <NavLink to="/funcionesSeries" >
 
-        <button className='butHome'>SERIES</button>
+            <button className='butHome'>SERIES</button>
 
-      </NavLink>
-      
+          </NavLink>
 
-      </div>
 
-      <div>
+        </div>
 
-      <NavLink to="/funcionesPelis" >
-        
-        <button className='butHome'>MOVIES</button>
+        <div>
 
-      </NavLink>
-      
+          <NavLink to="/funcionesPelis" >
+
+            <button className='butHome'>MOVIES</button>
+
+          </NavLink>
+
+
+        </div>
 
       </div>
 

@@ -12,7 +12,12 @@ export const Ordenar = () => {
 
         const datos = data.entries
         console.log(datos);
-        const ordenado = datos.map(peli => peli.title)
+
+        ///FALTA SACAR LOS TITULOS SOLO POR PELI
+        const soloPeliculas = datos.filter((elemento)=>(
+            elemento.programType == 'movie'
+        ))
+        const ordenado = soloPeliculas.map(peli => peli.title)
         console.log(ordenado);
         const ascendente = datos.sort((a, b) => (a.title > b.title) ? 1 : -1);
         console.log(ascendente);
@@ -36,7 +41,7 @@ export const Ordenar = () => {
 
         <div>
 
-            <button onClick={() => { ordenar(); monstrarTodaLaInfo(); }}>ORDENADAS</button>
+            <button onClick={() => { ordenar(); monstrarTodaLaInfo(); }}>Ordenadas por orden alfabético</button>
 
 
             {mostrarInfo &&

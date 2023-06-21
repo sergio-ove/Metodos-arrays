@@ -1,6 +1,6 @@
 import { Rutas } from "./router/routes";
 import "../src/css/Index.css"
-import "../src/css/Series.css"
+import "../src/css/Cartas.css"
 
 
 

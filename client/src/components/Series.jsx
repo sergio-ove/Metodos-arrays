@@ -6,6 +6,7 @@ export const Series = () => {
 
     const [series, setSeries] = useState("");
     const [mostrarInfo, setMostrarInfo] = useState(false);
+    const [mostrarCadaSerie, setMostrarCadaSerie] = useState(false);
 
 
     const soloSeries = () => {
@@ -26,10 +27,16 @@ export const Series = () => {
     }
 
 
+    const infoDeCadaSerie = () => {
+        setMostrarCadaSerie(!mostrarCadaSerie)
+
+    }
+
+
     return (
         <div>
 
-            <button onClick={() => { soloSeries(); monstrarTodaLaInfo(); }}>INFO</button>
+            <button onClick={() => { soloSeries(); monstrarTodaLaInfo(); }}>Info de todas las series</button>
 
             {mostrarInfo &&
 
@@ -38,8 +45,11 @@ export const Series = () => {
 
                         <div key={serie.title} className='div20'>
 
-                            {<button onClick={soloSeries} value={serie.title}>{serie.title}</button>}
+                            <button onClick={() => { soloSeries(); infoDeCadaSerie() }} value={serie.title}>{serie.title}</button>
+
                             <img src={serie.images["Poster Art"].url} alt="" />
+
+                            {mostrarCadaSerie ? <div className='divInfoPorPeli'><p className='pInfo'>{serie.title}</p><p className='pInfo'>{serie.releaseYear}</p></div> : ""}
 
                         </div>
 
