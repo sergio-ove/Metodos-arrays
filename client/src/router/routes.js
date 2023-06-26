@@ -1,8 +1,8 @@
 import React from 'react'
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import { Home } from '../components/Home'
-import { FuncionesPelis } from '../components/FuncionesPelis'
-import { FuncionesSeries } from '../components/FuncionesSeries'
+import { FuncionesPelis } from '../components/Peliculas/FuncionesPelis'
+import { FuncionesSeries } from '../components/Series/FuncionesSeries'
 
 
 

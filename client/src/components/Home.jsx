@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import claqueta from '../img/claqueta.png'
+import palomitas from '../img/palomitas.png'
 
 export const Home = () => {
 
@@ -9,6 +9,13 @@ export const Home = () => {
   return (
     <div>
       <h2>Métodos de arrays</h2>
+
+      <div className='divImagen'>
+
+        <img src={palomitas} alt="" />
+        
+      </div>
+
       <div className='divDosCajas'>
         <div>
 

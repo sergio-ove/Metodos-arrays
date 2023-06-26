@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import data from '../Peliculas.json'
+import data from '../../Peliculas.json'
 
-export const PrimerosVeintePelis = () => {
+export const PrimerosVeinteSeries = () => {
 
 
     const [pelicula, setPelicula] = useState("");
@@ -13,7 +13,7 @@ export const PrimerosVeintePelis = () => {
         const datos = data.entries
 
         const soloPeliculas = datos.filter((elemento)=>(
-            elemento.programType == 'movie'
+            elemento.programType === 'series'
         ))
 
         console.log(soloPeliculas);
@@ -50,7 +50,7 @@ export const PrimerosVeintePelis = () => {
     return (
         <div>
 
-            <button onClick={() => { primerosVeinte(); monstrarTodaLaInfo(); }}>20 Primeras del array</button>
+            <button onClick={() => { primerosVeinte(); monstrarTodaLaInfo(); }}>20 Primeras</button>
 
             {mostrarInfo &&
 

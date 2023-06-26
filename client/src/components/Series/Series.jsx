@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import data from '../Peliculas.json'
+import data from '../../Peliculas.json'
 
 export const Series = () => {
 
@@ -12,15 +12,10 @@ export const Series = () => {
     const soloSeries = () => {
 
         const series = data.entries
-        const soloBuscaSerie = series.filter((element) => element.programType == "series")
+        const soloBuscaSerie = series.filter((element) => element.programType === "series")
         setSeries(soloBuscaSerie)
     }
 
-    console.log(series);
-
-
-    const datos = data.entries
-    const url = datos.map((element) => element.images["Poster Art"])
 
     const monstrarTodaLaInfo = () => {
         setMostrarInfo(!mostrarInfo);
@@ -44,8 +39,8 @@ export const Series = () => {
                     {series.length > 0 ? series.map((serie) => (
 
                         <div key={serie.title} className='div20'>
-
-                            <button onClick={() => { soloSeries(); infoDeCadaSerie() }} value={serie.title}>{serie.title}</button>
+                            
+                            <button onClick={() => { soloSeries(); infoDeCadaSerie() }} value={serie.title}>Mostrar info</button>
 
                             <img src={serie.images["Poster Art"].url} alt="" />
 

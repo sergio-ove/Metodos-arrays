@@ -1,16 +1,11 @@
 import React from 'react'
-import { Ordenar } from './Ordenar'
-import { ReleaseYear } from './ReleaseYear'
 import { Series } from './Series'
 import { NavLink } from 'react-router-dom'
 import { PrimerosVeinteSeries } from './PrimerosVeinteSeries'
+import { SeriesReleaseYear } from './SeriesReleaseYear'
+import { OrdenarSeries } from './OrdenarSeries'
 
 export const FuncionesSeries = () => {
-
-
-  const returnHome = () => {
-    <NavLink to="/"></NavLink>
-  }
 
 
 
@@ -20,9 +15,9 @@ export const FuncionesSeries = () => {
       <div>
         <div className='divFunciones'>
           <Series></Series>
-          <Ordenar></Ordenar>
-         <PrimerosVeinteSeries></PrimerosVeinteSeries>
-          <ReleaseYear></ReleaseYear>
+          <OrdenarSeries></OrdenarSeries>
+          <PrimerosVeinteSeries></PrimerosVeinteSeries>
+          <SeriesReleaseYear></SeriesReleaseYear>
         </div>
 
       </div>

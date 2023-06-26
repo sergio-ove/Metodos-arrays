@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import data from '../Peliculas.json'
+import data from '../../Peliculas.json'
 
 export const Peliculas = () => {
 
@@ -17,7 +17,6 @@ export const Peliculas = () => {
         setPelicula(soloBuscaPeli)
     }
 
-    console.log(pelicula);
 
     const monstrarTodaLaInfo = () => {
         setMostrarInfo(!mostrarInfo);
@@ -43,7 +42,7 @@ export const Peliculas = () => {
 
                         <div key={peli.title} className='div20'>
 
-                            <button onClick={() => { soloPeliculas(); infoDeCadaPeli() }} value={peli.title}>{peli.title}</button>
+                            <button onClick={() => { soloPeliculas(); infoDeCadaPeli() }} value={peli.title}>Mostrar Info</button>
 
                             <img src={peli.images["Poster Art"].url} alt="" />
 

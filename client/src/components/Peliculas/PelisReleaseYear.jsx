@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import data from '../Peliculas.json'
+import data from '../../Peliculas.json'
 
-export const ReleaseYear = () => {
+export const PelisReleaseYear = () => {
 
     const [peli, setPeli] = useState("");
     const [mostrarInfo, setMostrarInfo] = useState(false);
@@ -12,11 +12,15 @@ export const ReleaseYear = () => {
 
         const datos = data.entries
 
-        const condicion = datos.filter((element) => element.releaseYear >= 2010)
-        console.log(condicion);
+        //SACAMOS SOLO LOS OBJETOS QUE SON PELÍCULAS
+        const soloPeliculas = datos.filter((elemento) => (
+            elemento.programType === 'movie'
+        ))
+
+        //SACAMOS SOLO LOS OBJETOS CON LA PROPIEDAD "RELEASEYEAR MAYOR O IGUAL A 2010"
+        const condicion = soloPeliculas.filter((element) => element.releaseYear >= 2010)
 
         setPeli(condicion)
-        console.log({ peli });
     }
 
     const monstrarTodaLaInfo = () => {
@@ -44,7 +48,7 @@ export const ReleaseYear = () => {
 
                         <div key={peli.title} className='div20'>
 
-                            <button onClick={() => { year(); infoDeCada() }} value={peli.title}>{peli.title}</button>
+                            <button onClick={() => { year(); infoDeCada() }} value={peli.title}>Mostrar Info</button>
 
                             <img src={peli.images["Poster Art"].url} alt="" />
 
