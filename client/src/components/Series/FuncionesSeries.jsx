@@ -1,8 +1,8 @@
 import React from 'react'
-import { Series } from './Series'
+import { Series } from './MostarSeries'
 import { NavLink } from 'react-router-dom'
 import { PrimerosVeinteSeries } from './PrimerosVeinteSeries'
-import { SeriesReleaseYear } from './SeriesReleaseYear'
+import { SeriesReleaseYear } from './SeriesPorAntiguedad'
 import { OrdenarSeries } from './OrdenarSeries'
 
 export const FuncionesSeries = () => {

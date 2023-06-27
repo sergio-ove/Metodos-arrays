@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import data from '../../Peliculas.json'
 
-export const PelisReleaseYear = () => {
+export const PelisPorAntiguedad = () => {
 
     const [peli, setPeli] = useState("");
     const [mostrarInfo, setMostrarInfo] = useState(false);

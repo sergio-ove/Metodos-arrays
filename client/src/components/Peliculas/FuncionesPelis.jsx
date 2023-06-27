@@ -1,9 +1,9 @@
 import React from 'react'
-import { Peliculas } from './Peliculas'
 import { NavLink } from 'react-router-dom'
 import { PrimerosVeintePelis } from './PrimerosVeintePelis'
-import { PelisReleaseYear } from './PelisReleaseYear'
 import { OrdenarPelis } from './OrdenarPelis'
+import { Peliculas } from './MostrarPelis'
+import { PelisPorAntiguedad } from './PelisPorsAntiguedad'
 
 
 export const FuncionesPelis = () => {
@@ -13,10 +13,11 @@ export const FuncionesPelis = () => {
       <div>
 
         <div className='divFunciones'>
+          
           <Peliculas></Peliculas>
           <OrdenarPelis></OrdenarPelis>
           <PrimerosVeintePelis></PrimerosVeintePelis>
-          <PelisReleaseYear></PelisReleaseYear>
+          <PelisPorAntiguedad></PelisPorAntiguedad>
 
         </div>
 

@@ -6,13 +6,15 @@ export const PrimerosVeinteSeries = () => {
 
     const [pelicula, setPelicula] = useState("");
     const [mostrarInfo, setMostrarInfo] = useState(false);
+    const [ocultar, setOcultar] = useState(false);
+    const [infoPeli, setInfoPeli] = useState("");
 
 
     const primerosVeinte = () => {
 
         const datos = data.entries
 
-        const soloPeliculas = datos.filter((elemento)=>(
+        const soloPeliculas = datos.filter((elemento) => (
             elemento.programType === 'series'
         ))
 
@@ -40,12 +42,26 @@ export const PrimerosVeinteSeries = () => {
 
         console.log(found);
 
+        setInfoPeli(found)
+
+        setOcultar(!ocultar);
+
     }
+
+
+    console.log(infoPeli);
 
 
     const monstrarTodaLaInfo = () => {
         setMostrarInfo(!mostrarInfo);
     }
+
+
+    const monstrarPopUp = () => {
+        setOcultar(!ocultar);
+    }
+
+
 
     return (
         <div>
@@ -60,16 +76,33 @@ export const PrimerosVeinteSeries = () => {
 
                         <div key={peli.title} className='div20'>
 
-                            {<button onClick={info} value={peli.title}>{peli.title}</button>}
+                            <button onClick={info} value={peli.title}>{peli.title}</button>
                             <img src={peli.images["Poster Art"].url} alt="" />
+                            
+                            {ocultar &&
+
+                                <div className='divInfoIndividual'>
+
+                                    <p>{infoPeli.title}</p>
+
+                                </div>
+                            }
 
 
                         </div>
 
+
                     )) : ""}
+
+
 
                 </div>
             }
+
+
+
+
+
         </div>
     );
 }
