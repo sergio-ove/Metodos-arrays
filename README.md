@@ -1,4 +1,4 @@
-# Metodos-arrays
+# Metodos-arrays (Prueba técnica React)
 
 Prueba técnica que se basa en el manejo de React y React-router-dom.
 Manejo de métodos de arrays y posterior visualización mediante el uso de Hooks.
@@ -6,6 +6,7 @@ Manejo de métodos de arrays y posterior visualización mediante el uso de Hooks
 ### Inicialización del proyecto:
 Para inicializar el proyecto abrir la terminal y escribir los siguientes comandos:
 Con éste se clonará de GitHub mi repositorio de la prueba.
+
 ```
 git clone https://github.com/sergio-ove/Metodos-arrays.git
 ```
@@ -53,5 +54,10 @@ Se abrirá el navegador en [http://localhost:3000](http://localhost:3000) y podr
 | Método    | Descripción   |         
 |---------------------------|-------|
 | map() |   Con él recorremos el array correspondiente de cada componente para su visualización |         
-| filter()      |   Creamos un nuevo array con los objetos que necesitemos en cada componente.Por ejemplo,en el caso de mi componente "SeriesPorAntiguedad" creamos un nuevo array con los objetos que en su propiedad "releaseYear" sean iguales o mayores al dato "2010".De esta manera obtenemos las series que se hayan estrenado a partir del año 2010.   |  
-| sort() | Ordenamos los objetos del array.En el caso del componente "OrdenarSeries" los ordenaremos por el atributo "title" de manera ascendente con órden alfanumérico.
+| filter()      |   Creamos un nuevo array con los objetos que necesitemos en cada componente.
+En el caso de mi componente "SeriesPorAntiguedad" creamos un nuevo array con los objetos que en su propiedad "releaseYear" sean iguales o mayores al dato "2010".
+De esta manera obtenemos las series que se hayan estrenado a partir del año 2010.   |  
+| sort() | Ordenamos los objetos del array.
+En el caso del componente "OrdenarSeries" los ordenaremos por el atributo "title" de manera ascendente con órden alfanumérico.
+| find() | Nos devuelve en nuestro caso la primera coincidencia que encuentre por "title" entre el titulo "clickado" por el usuario y el objeto correspondiente en el array de objetos.Una vez encuentre la coincidencia,guardamos el objeto con todas las propiedades en nuestro  
+const [infoPeli, setInfoPeli] = useState("") y lo renderizamos en la funcionalidad del popUp con toda su información.
