@@ -54,10 +54,6 @@ Se abrirá el navegador en [http://localhost:3000](http://localhost:3000) y podr
 | Método    | Descripción   |         
 |---------------------------|-------|
 | map() |   Con él recorremos el array correspondiente de cada componente para su visualización |         
-| filter()      |   Creamos un nuevo array con los objetos que necesitemos en cada componente.
-En el caso de mi componente "SeriesPorAntiguedad" creamos un nuevo array con los objetos que en su propiedad "releaseYear" sean iguales o mayores al dato "2010".
-De esta manera obtenemos las series que se hayan estrenado a partir del año 2010.   |  
-| sort() | Ordenamos los objetos del array.
-En el caso del componente "OrdenarSeries" los ordenaremos por el atributo "title" de manera ascendente con órden alfanumérico.
-| find() | Nos devuelve en nuestro caso la primera coincidencia que encuentre por "title" entre el titulo "clickado" por el usuario y el objeto correspondiente en el array de objetos.Una vez encuentre la coincidencia,guardamos el objeto con todas las propiedades en nuestro  
-const [infoPeli, setInfoPeli] = useState("") y lo renderizamos en la funcionalidad del popUp con toda su información.
+| filter()      |   Creamos un nuevo array con los objetos que necesitemos en cada componente.En el caso del componente "Home" tenemos la opción de clickar la opción de Series o Movies.Una vez elegida la opción por el usuario automáticamente nos dirigirá a los componentes relacionados con cada "card", donde ya habremos filtrado en caso y trabajaremos directamente con el array de Series o Movies según corresponda.
+| sort() | Ordenamos los objetos del array.En el caso del componente "OrdenarSeries" los ordenaremos por el atributo "title" de manera ascendente con órden alfanumérico.
+| find() | Nos devuelve en nuestro caso la primera coincidencia que encuentre por "title" entre el titulo "clickado" por el usuario y el objeto correspondiente en el array de objetos.Una vez encuentre la coincidencia,guardamos el objeto con todas las propiedades en nuestro const [infoPeli, setInfoPeli] = useState("") y lo renderizamos en la funcionalidad del popUp con toda su información.
