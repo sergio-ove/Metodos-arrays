@@ -54,19 +54,40 @@ export const PrimerosVeinteSeries = () => {
 
     const monstrarTodaLaInfo = () => {
         setMostrarInfo(!mostrarInfo);
+
     }
 
-
-    const monstrarPopUp = () => {
+    const cerrarInfo = () => {
         setOcultar(!ocultar);
-    }
 
+    }
 
 
     return (
         <div>
 
-            <button onClick={() => { primerosVeinte(); monstrarTodaLaInfo(); }}>20 Primeras</button>
+            <button onClick={() => { primerosVeinte(); monstrarTodaLaInfo(); }} className='butonGeneral' >20 Primeras</button>
+
+            {ocultar &&
+
+                <div className='divInfoIndividual'>
+
+                    <button onClick={cerrarInfo} className='botonCerrar'>X</button>
+
+                    <div className='divInformacion'>
+
+                        <p>Titulo: {infoPeli.title}</p>
+                        <p>Género: {infoPeli.programType}</p>
+                        <p>Estreno: {infoPeli.releaseYear}</p>
+                        <div>
+                        <img src={infoPeli.images["Poster Art"].url} alt="imagen cartel" />
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+
 
             {mostrarInfo &&
 
@@ -76,17 +97,9 @@ export const PrimerosVeinteSeries = () => {
 
                         <div key={peli.title} className='div20'>
 
-                            <button onClick={info} value={peli.title}>{peli.title}</button>
+                            <button onClick={info} value={peli.title}>Mostrar Info</button>
                             <img src={peli.images["Poster Art"].url} alt="" />
-                            
-                            {ocultar &&
 
-                                <div className='divInfoIndividual'>
-
-                                    <p>{infoPeli.title}</p>
-
-                                </div>
-                            }
 
 
                         </div>

@@ -1,7 +1,7 @@
 # Metodos-arrays
 
 Prueba técnica que se basa en el manejo de React y React-router-dom.
-Manejo de métodos de arrays y posterior visualización.
+Manejo de métodos de arrays y posterior visualización mediante el uso de Hooks.
 
 ### Inicialización del proyecto:
 Para inicializar el proyecto abrir la terminal y escribir los siguientes comandos:
@@ -23,7 +23,7 @@ npm start
 ```
 Se abrirá el navegador en [http://localhost:3000](http://localhost:3000) y podrá visualizarse el Inicio.
 
-### Tecnologías usadas primera entrega:
+### Tecnologías usadas:
 * react: 18.2.0
 * react-dom: 18.2.0
 * react-router-dom: 6.10.0 
@@ -31,10 +31,11 @@ Se abrirá el navegador en [http://localhost:3000](http://localhost:3000) y podr
 * web-vitals: 2.1.4
 
 ## Detalles:
-3 páginas con React:
-- [x] Una página de "Inicio"
-- [x] Una página de "Series"
-- [x] Una página "Películas"
+11 páginas con React:
+- [x] Una página de "Home" que contiene el acceso a "Series" y a "Movies"
+- [x] Una carpeta de "Series",con un componente central llamado "FuncionesSeries" que llama a sus 4 funcionalidades/componentes.
+- [x] Una carpeta de "Movies",con un componente central llamado "FuncionesMovies" que llama a sus 4 funcionalidades/componentes.
+
 
 
 ### Lista de características:
@@ -51,6 +52,6 @@ Se abrirá el navegador en [http://localhost:3000](http://localhost:3000) y podr
 
 | Método    | Descripción   |         
 |---------------------------|-------|
-| datos.map |   Para crear un nuevo array con los resultados de la llamada |         
-| datos.filter      |   Para crear un nuevo array con los elementos que cumplan la condición dada    |  
-| ordenado.sort | Para ordenar los elementos del array, devolviéndolo ordenado
+| map() |   Con él recorremos el array correspondiente de cada componente para su visualización |         
+| filter()      |   Creamos un nuevo array con los objetos que necesitemos en cada componente.Por ejemplo,en el caso de mi componente "SeriesPorAntiguedad" creamos un nuevo array con los objetos que en su propiedad "releaseYear" sean iguales o mayores al dato "2010".De esta manera obtenemos las series que se hayan estrenado a partir del año 2010.   |  
+| sort() | Ordenamos los objetos del array.En el caso del componente "OrdenarSeries" los ordenaremos por el atributo "title" de manera ascendente con órden alfanumérico.

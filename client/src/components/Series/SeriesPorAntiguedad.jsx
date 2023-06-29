@@ -37,7 +37,7 @@ export const SeriesReleaseYear = () => {
     return (
         <div>
             <div>
-                <button onClick={() => { year(); monstrarTodaLaInfo(); }}>A partir de 2010...</button>
+                <button onClick={() => { year(); monstrarTodaLaInfo(); }} className='butonGeneral'>A partir de 2010...</button>
             </div>
 
             {mostrarInfo &&

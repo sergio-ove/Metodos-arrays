@@ -40,7 +40,7 @@ export const OrdenarSeries = () => {
 
       <div>
 
-          <button onClick={() => { ordenar(); monstrarTodaLaInfo(); }}>Ordenadas por orden alfabético</button>
+          <button onClick={() => { ordenar(); monstrarTodaLaInfo(); }} className='butonGeneral'>Ordenadas por orden alfabético</button>
 
 
           {mostrarInfo &&

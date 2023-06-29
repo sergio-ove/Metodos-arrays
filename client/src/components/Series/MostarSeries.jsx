@@ -31,7 +31,7 @@ export const Series = () => {
     return (
         <div>
 
-            <button onClick={() => { soloSeries(); monstrarTodaLaInfo(); }}>Info de todas las series</button>
+            <button onClick={() => { soloSeries(); monstrarTodaLaInfo(); }} className='butonGeneral'>Info de todas las series</button>
 
             {mostrarInfo &&
 

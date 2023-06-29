@@ -48,7 +48,7 @@ export const PrimerosVeintePelis = () => {
     return (
         <div>
 
-            <button onClick={() => { primerosVeinte(); monstrarTodaLaInfo(); }}>20 Primeras</button>
+            <button onClick={() => { primerosVeinte(); monstrarTodaLaInfo(); }} className='butonGeneral'>20 Primeras</button>
 
             {mostrarInfo &&
 

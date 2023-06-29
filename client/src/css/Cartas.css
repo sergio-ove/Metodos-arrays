@@ -4,7 +4,7 @@
     justify-content: center;
 }
 
-.divFunciones button {
+.divFunciones .butonGeneral {
     width: 480px;
     margin-top: 50px;
     margin-right: 20px;
@@ -79,5 +79,28 @@
 }
 
 .divInfoIndividual{
-    background-color: red;
+    background-color: white;
+    position: relative;
+    margin-left: 10px;
+    width: 630px;
+    height: 300px;
+    border-radius: 5px;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+.botonCerrar{
+    position: relative;
+    width: 10%;
+    height: 10%;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.divInformacion{
+    height: 200px;
+}
+
+.divInformacion img{
+    width: 100%;
 }

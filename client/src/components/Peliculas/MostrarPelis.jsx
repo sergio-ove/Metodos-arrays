@@ -32,7 +32,7 @@ export const Peliculas = () => {
     return (
         <div>
 
-            <button onClick={() => { soloPeliculas(); monstrarTodaLaInfo(); }}>Info de todas las pelis</button>
+            <button onClick={() => { soloPeliculas(); monstrarTodaLaInfo(); }} className='butonGeneral'>Info de todas las pelis</button>
 
             {mostrarInfo &&
 
