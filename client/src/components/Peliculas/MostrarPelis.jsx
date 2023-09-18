@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import data from '../../Peliculas.json'
 
-export const Peliculas = () => {
+export const MostrarPelis = () => {
 
 
     const [pelicula, setPelicula] = useState("");
